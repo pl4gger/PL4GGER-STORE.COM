@@ -1,0 +1,634 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLAZE CHEATS</title>
+     <link rel="icon" type="logo.png" href="logo.png">
+    <style>
+/* Keyframes for slide-in animation */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Apply animation to the heading */
+.youtube-section h2 {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+/* Apply animation to each video */
+.youtube-section div {
+    animation: fadeIn 1s ease-out;
+    animation-delay: 0.5s; /* Delay animation for each video */
+}
+.youtube-section div:nth-child(2) {
+    animation-delay: 1s; /* Slightly delay second video */
+}
+.youtube-section div:nth-child(3) {
+    animation-delay: 1.5s; /* Slightly delay third video */
+}
+
+ img.logo {
+            width: 100px;  /* Adjust the size as needed */
+            height: 100px; /* Adjust the size as needed */
+            border-radius: 50%; /* This makes it circular */
+            object-fit: cover; /* Ensures the logo fills the circle without distortion */
+        }
+        /* Animated Buy Button */
+.buy-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #b6081f;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buy-button:hover {
+    background-color: #d11a2d;
+    transform: scale(1.1);
+}
+
+.buy-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    transition: left 0.5s ease;
+    z-index: 0;
+}
+
+.buy-button:hover::before {
+    left: 100%;
+}
+
+.buy-button:active {
+    transform: scale(0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        footer {
+            padding: 20px;
+            background-color: #121212;
+            color: #ccc;
+        }
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            text-align: center;
+        }
+
+        /* Header Styling */
+        header {
+            padding: 50px 0;
+            background-color: #121212;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 140px;
+            color: #fff;
+            text-shadow: 0 0 10px #b6081f, 0 0 20px #b6081f, 0 0 30px #b6081f;
+            animation: glowEffectHeader 2s infinite alternate;
+        }
+
+        header p {
+            font-size: 25px;
+            margin-top: 10px;
+            color: #ccc;
+            text-shadow: 0 0 5px #b6081f, 0 0 10px #b6081f;
+        }
+        .slide img {
+  width: 100px;;
+  height: 100px;
+}        .product-card img {
+    width: 100px; /* Make the image take up the full width of the card */
+    height: 100px; /* Maintain aspect ratio */
+    margin-top: 20px; /* Space between text and image */
+    border-radius: 8px; /* Rounded corners for the image */
+    object-fit: cover; /* Ensures the image doesn't stretch */
+}*
+        /* Product Section Styling */
+        .products, .bottom-section {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin: 50px 20px;
+        }
+
+        .product-card {
+            background: #2b2b2b;
+            padding: 30px 15px;
+            border-radius: 15px;
+            width: 570px;
+            height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+            border: 1px solid #444;
+            font-size: 16px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .product-card h2 {
+            font-size: 24px;
+            color: #fff;
+            text-shadow: 0 0 5px #b6081f, 0 0 10px #b6081f, 0 0 20px #b6081f;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: #222;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            color: #fff;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .new-close {
+            background: red;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        /* Form Styling */
+        #detailsForm {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        #detailsForm label {
+            font-size: 18px;
+            color: #ccc;
+        }
+
+        #detailsForm input, #detailsForm select {
+            padding: 10px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background: #2b2b2b;
+            color: #fff;
+            width: 100%;
+        }
+
+        #detailsForm button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #b6081f;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #detailsForm button:hover {
+            background-color: #d11a2d;
+        }
+
+        /* Notification Container */
+        #notifications {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+
+        /* Notification Styling */
+        .notification {
+    background-color: #444;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.5s ease, fadeOut 3s 3s forwards, colorChange 5s infinite alternate; /* Add color change animation */
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+        .notification img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Make the image circular */
+}
+@keyframes colorChange {
+    0% {
+        background-color: #444;
+    }
+    50% {
+        background-color: #b6081f; /* Red */
+    }
+    100% {
+        background-color: #f1c40f; /* Yellow */
+    }
+}
+
+   /* Optional: You can adjust the sliding-in and fading-out effect timings if needed */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>PL4GGER STORE</h1>
+        <p>BE THE INSTA EXPERT THROUGH US </p>
+    </header>
+
+    <section class="products">
+        <div class="product-card">
+            <h2>INSTAGRAM FOLLOWERS</h2>
+            <p>CLICK IT AND FILL THE FORM FOR FOLLOWERS.</p>
+            <button class="buy-button" id="buyButtonBasic">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <h2>INSTAGRAM LIKES</h2>
+            <p>CLICK IT AND FILL THE FORM FOR LIKES.</p>
+            <button class="buy-button" id="buyButtonExclusive">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <h2>META SUBSCRIBTION</h2>
+            <p>CLICK IT AND FILL THE FORM FOR META VERIFICATION.</p>
+            <button class="buy-button" id="buyButtonStreamer">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <h2>INSTAGRAM ACCOUNT BANNING.</h2>
+            <p>CLICK IT AND FILL THE FORM FOR DETAILS.</p>
+            <button class="buy-button" id="buyButtonInfinite">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <h2>INSTAGRAM ACCOUNT UNBANNING.</h2>
+            <p>CLICK IT AND FILL THE FORM FOR DETAILS.</p>
+            <button class="buy-button" id="buyButtonInternal">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <h2>INSTAGRAM VIEWS</h2>
+            <p>CLICK IT AND FILL THE FORM FOR INSTAGRAM VIEWS</p>
+            <button class="buy-button" id="buyButtonPersonal">Buy Now</button>
+        </div>      
+    </section>
+    
+    
+    <section class="contact" style="text-align: center; margin: 50px 0;">
+        <div class="contact-card">
+            <h2>Connect with us</h2>     
+            <a href="https://discord.gg/PynrstKW" 
+               target="_blank" 
+               class="contact-link">
+                <img src="discord.png" alt="Discord Logo" class="contact-icon"> Official Discord Server
+            </a>
+            
+        
+        </div>
+    </section>
+    
+
+    </style>
+</section>
+    <!-- CSS -->
+    <style>
+        /* Overall contact card style */
+        .contact-card {
+            display: inline-block;
+            background: #1d1d1d;
+            padding: 40px 50px;
+            border-radius: 25px;
+            width: 350px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+        }
+    
+        /* Hover effect to lift card */
+        .contact-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+        }
+    
+        /* Heading styles */
+        .contact-card h2 {
+            color: #b6081f;  /* Applied the new color here */
+            margin-bottom: 25px;
+            font-size: 2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: transform 0.3s ease-in-out, color 0.3s ease;
+        }
+    
+        /* Hover effect on heading */
+        .contact-card:hover h2 {
+            transform: translateX(10px);
+            color: #fff;  /* Change heading color on hover */
+        }
+    
+        /* Link styles */
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.25em;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background-color: #333;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+    
+        /* Hover effect for links */
+        .contact-link:hover {
+            background-color: #b6081f;  /* Applied the new color here */
+            transform: translateX(10px);
+        }
+    
+        /* Add cool animation to the icon */
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+    
+        /* Hover effect for icons */
+        .contact-link:hover .contact-icon {
+            transform: scale(1.2) rotate(10deg);
+            filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3));
+        }
+    
+        /* Floating gradient effect for the card */
+        .contact-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(182, 8, 31, 0.1));  /* Applied the color to gradient */
+            animation: floating 3s infinite linear;
+            border-radius: 25px;
+            z-index: -1;
+        }
+    
+        /* Animation keyframes for the floating effect */
+        @keyframes floating {
+            0% {
+                background-position: -200% -200%;
+            }
+            100% {
+                background-position: 200% 200%;
+            }
+        }
+    </style>
+    
+
+
+    
+    <footer>
+        <p>&copy; 2024 PL4GGER STORE. All rights reserved.</p>
+    </footer>
+
+    <img src="banner.gif" style="width: 1795px; height: auto;">
+       
+    <div id="pricingModal" class="modal">
+        <div class="modal-content">
+            <div class="subscription-plans" id="subscriptionPlans"></div>
+
+            <div id="subscriptionForm" style="display: none;">
+                <h2>Fill Your Details</h2>
+                <form id="detailsForm">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required pattern="^\+?[1-9]\d{1,14}$">
+
+                    <label for="whatsapp">WhatsApp Number:</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" required pattern="^\+?[1-9]\d{1,14}$">
+
+                    <label for="instagram">Instagram Handle:</label>
+                    <input type="text" id="instagram" name="instagram">
+
+                    <label for="subscription">Subscription Type:</label>
+                    <input type="text" id="subscription" name="subscription" readonly>
+
+                    <label for="duration">Subscription Duration:</label>
+                    <select id="duration" name="duration" required>
+                        <option value="1 month">1 Month</option>
+                        <option value="3 months">3 Months</option>
+                        <option value="1 year">1 Year</option>
+                     
+                        <option value="custom">Custom Duration</option>
+                    </select>
+
+                    <div id="customDurationField" style="display: none;">
+                        <label for="customDuration">Enter Custom Duration:</label>
+                        <input type="text" id="customDuration" name="customDuration" placeholder="e.g., 2 months, 6 months">
+                    </div>
+
+                    
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <button class="new-close">Close</button>
+        </div>
+    </div>
+
+    <div id="notifications"></div>
+
+    <script>
+        const discordWebhookUrl = 'https://discord.com/api/webhooks/1309616649976152215/dtghW21VH9ldL6ZUHxRev2T06pYjaYqGTIjsrac0HHhf0l3VPCE-70Aia7QdB1I9UTk5'; // Replace with your actual Discord webhook URL
+        const pricingModal = document.getElementById('pricingModal');
+        const closeModalButton = document.querySelector('.new-close');
+        const customDurationField = document.getElementById('customDurationField');
+        const durationSelect = document.getElementById('duration');
+
+        document.getElementById('buyButtonBasic').addEventListener('click', () => openModal('Basic Panel'));
+        document.getElementById('buyButtonExclusive').addEventListener('click', () => openModal('Exclusive Panel'));
+        document.getElementById('buyButtonStreamer').addEventListener('click', () => openModal('Streamer Panel'));
+
+            // New Event Listeners for the new products
+    document.getElementById('buyButtonInfinite').addEventListener('click', () => openModal('Infinite Panel'));
+    document.getElementById('buyButtonInternal').addEventListener('click', () => openModal('Internal Panel'));
+    document.getElementById('buyButtonPersonal').addEventListener('click', () => openModal('Customize Panel For Personal Use'));
+    document.getElementById('buyButtonSelling').addEventListener('click', () => openModal('Customize Panel For Selling'));
+
+        closeModalButton.addEventListener('click', () => {
+            pricingModal.style.display = 'none';
+        });
+
+        durationSelect.addEventListener('change', function () {
+            if (this.value === 'custom') {
+                customDurationField.style.display = 'block';
+            } else {
+                customDurationField.style.display = 'none';
+            }
+        });
+
+        function openModal(productType) {
+            pricingModal.style.display = 'flex';
+            document.getElementById('subscriptionForm').style.display = 'block';
+            document.getElementById('subscription').value = productType;
+        }
+
+        window.onload = function() {
+            showNotification('Welcome to Blaze Cheats!', 'logo.png');
+        };
+
+        function showNotification(message, logoUrl = '') {
+            const notificationContainer = document.getElementById('notifications');
+            const notification = document.createElement('div');
+            notification.classList.add('notification');
+
+            if (logoUrl) {
+                const logoImage = document.createElement('img');
+                logoImage.src = logoUrl;
+                notification.appendChild(logoImage);
+            }
+
+            const messageText = document.createElement('span');
+            messageText.textContent = message;
+            notification.appendChild(messageText);
+
+            notificationContainer.appendChild(notification);
+
+            setTimeout(() => {
+                notification.remove();
+            }, 4000);
+        }
+
+        document.getElementById('detailsForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            showNotification('Details submitted successfully!', 'logo.png');
+
+            const formData = new FormData(this);
+            const formObject = {};
+
+            formData.forEach((value, key) => {
+                formObject[key] = value;
+            });
+
+            const payload = {
+                content: `New Subscription Details: 
+                \n**Username:** ${formObject.username}
+                \n**Email:** ${formObject.email}
+                \n**Phone:** ${formObject.phone}
+                \n**WhatsApp:** ${formObject.whatsapp}
+                \n**Instagram:** ${formObject.instagram}
+                \n**Subscription Type:** ${formObject.subscription}
+                \n**Duration:** ${formObject.duration}${formObject.customDuration ? ' (' + formObject.customDuration + ')' : ''}`,
+                username: 'Blaze Cheats Subscription Bot',
+            };
+
+            fetch(discordWebhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            })
+            .then(response => response.json())
+            .then(data => {
+                window.location.href = 'index.html'; // Redirect after submission
+            })
+            .catch(error => {
+                showNotification('Error submitting details.', 'logo.png');
+            });
+        });
+    </script>
+</body>
+</html>
